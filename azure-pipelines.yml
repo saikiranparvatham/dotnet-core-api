@@ -17,3 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure for Students(15dd5ed7-ee69-40cc-9424-bc22e1c13f53)'
+    appType: 'webApp'
+    appName: 'Sample-app'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
