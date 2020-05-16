@@ -25,6 +25,6 @@ steps:
   inputs:
     azureSubscription: 'Azure for Students(15dd5ed7-ee69-40cc-9424-bc22e1c13f53)'
     appType: 'webApp'
-    appName: 'Sample-app'
+    appName: 'Sample-app-saikparv'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
